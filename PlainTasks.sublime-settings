@@ -1,0 +1,18 @@
+{
+    "always_show_minimap_viewport": true,
+
+	"cancelled_tasks_bullet": "[-]",
+	"color_scheme": "Packages/Boxy Theme/extras/PlainTasks/Boxy Solarized Light.hidden-tmTheme",
+	"done_tasks_bullet": "[x]",
+	"extensions":
+	[
+		"TODO",
+		"todo",
+		"todolist",
+		"taskpaper",
+		"tasks",
+		"todo"
+	],
+	"open_tasks_bullet": "[ ]",
+	"tab_size": 2
+}

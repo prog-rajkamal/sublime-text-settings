@@ -1,0 +1,35 @@
+{
+  "codeformatter_js_options": {
+    "syntaxes": "javascript,json,js, javascript (babel)", // Syntax names which must process JS formatter
+    "format_on_save": false, // Format on save
+    "indent_size": 4, // indentation size
+    "jslint_happy": true, // if true, then jslint-stricter mode is enforced. Example function () vs function()
+    "brace_style": "collapse", // "collapse" | "expand" | "end-expand". put braces on the same line as control statements (default), or put braces on own line (Allman / ANSI style), or just put end braces on own line.
+    "keep_array_indentation": true, // keep array indentation.
+    "keep_function_indentation": false, // keep function indentation.
+    "unescape_strings": false, // Decode printable characters encoded in xNN notation
+    "end_with_newline": true, // Add new line at end of file
+    "break_chained_methods": true, // Break chained method calls across subsequent lines
+    "preserve_newlines": true, // whether existing line breaks should be preserved,
+    "max_preserve_newlines": 3, // maximum number of line breaks to be preserved in one chunk
+  },
+  "codeformatter_css_options": {
+    "syntaxes": "css,less", // Syntax names which must process CSS formatter
+    "format_on_save": true, // Format on save
+    "indent_size": 4, // Indentation size
+    "indent_char": " ", // Indentation character
+    "indent_with_tabs": false, // Indent with one tab (overrides indent_size and indent_char options)
+    "selector_separator_newline": false, // Add new lines after selector separators
+    "end_with_newline": false, // Add new line of end in file
+    "newline_between_rules": true, // Add new line between rules
+    "eol": "\n" // EOL symbol
+  },
+  "codeformatter_html_options": {
+    "syntaxes": "html,blade,asp,xml,vue component, vue", // Syntax names which must process HTML formatter
+    "formatter_version": "bs4", // Which formatter to use. Current options are "bs4" and "regexp". If an error occurs while loading the bs4 formatter, the regexp formatter will automatically be used
+    "format_on_save": false, // Format on save
+    "indent_size": 4, // indentation size
+    "expand_javascript": true, // (Under construction) Expand JavaScript inside of <script> tags (also affects CSS purely by coincidence)
+    "expand_tags": true, // Expand tag attributes onto new lines
+  }
+}

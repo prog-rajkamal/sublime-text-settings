@@ -1,0 +1,148 @@
+[
+
+
+  { "keys": ["apps+alt+up"], "command": "scroll_lines", "args": {"amount": 10.0 } },
+
+  { "keys": ["ctrl+up"], "command": "scroll_lines", "args": {"amount": 1.0 } },
+  { "keys": ["ctrl+down"], "command": "scroll_lines", "args": {"amount": -1.0 } },
+
+  { "keys": ["ctrl+shift+h"], "command": "replace_next" },
+
+  {
+    "keys": ["ctrl+k", "ctrl+b"],
+    "command": "build"
+  },
+  {
+    "keys": ["ctrl+b"],
+    "command": "toggle_side_bar"
+  },
+
+  // { "keys": ["ctrl+alt+h"], "command": "replace", "args": {"close_panel": true},
+  //   "context": [{"key": "panel", "operand": "replace"}, {"key": "panel_has_focus"}]
+  // },
+  // { "keys": ["ctrl+k", "ctrl+w"], "command": "title_case" },
+
+  {
+    "keys": ["ctrl+shift+v"],
+    "command": "paste"
+  },
+  {
+    "keys": ["ctrl+v"],
+    "command": "paste_and_indent"
+  },
+  {
+    "keys": ["ctrl+t"],
+    "command": "open_terminal_project_folder"
+  },
+  { "keys": ["alt+q"], "command": "wrap_lines" },
+
+
+  //Origami keybindings (for pane split and travel)
+  {
+    "keys": ["ctrl+k", "ctrl+up"],
+    "command": "travel_to_pane",
+    "args": {
+      "direction": "up"
+    }
+  },
+  {
+    "keys": ["ctrl+k", "ctrl+right"],
+    "command": "travel_to_pane",
+    "args": {
+      "direction": "right"
+    }
+  },
+  {
+    "keys": ["ctrl+k", "ctrl+down"],
+    "command": "travel_to_pane",
+    "args": {
+      "direction": "down"
+    }
+  },
+  {
+    "keys": ["ctrl+k", "ctrl+left"],
+    "command": "travel_to_pane",
+    "args": {
+      "direction": "left"
+    }
+  },
+  { "keys": ["ctrl+k", "ctrl+d"], "command": "find_under_expand_skip" },
+
+  {
+    "keys": ["ctrl+alt+d"],
+    "command": "destroy_pane",
+    "args": {
+      "direction": "self"
+    },
+  },
+//pulling tab from other panes to current tab
+  {
+    "keys": ["ctrl+k", "shift+left"],
+    "command": "pull_file_from_pane",
+    "args": {
+      "direction": "left"
+    }
+  },
+  {
+    "keys": ["ctrl+k", "shift+right"],
+    "command": "pull_file_from_pane",
+    "args": {
+      "direction": "right"
+    }
+  },
+  {
+    "keys": ["ctrl+tab"],
+    "command": "next_view"
+  },
+  {
+    "keys": ["ctrl+shift+tab"],
+    "command": "prev_view"
+  },
+
+  { "keys": ["alt+down"], "command": "swap_line_down" },
+  { "keys": ["alt+up"], "command": "swap_line_up" },
+
+  // INC-DEC-VAL
+// 212
+
+{ "keys": ["ctrl+shift+up"],  "command": "inc_dec_value",
+  "args": { "action": "inc_min" },
+  "context": [{ "key": "preceding_text", "operator": "regex_contains", "operand": "^[0-9]{1,*}$",
+  "match_all": true
+  }
+]
+},
+{ "keys": ["ctrl+shift+-"], "command": "toggle_snake_camel_pascal"},
+
+{ "keys": ["ctrl+shift+down"],"command": "inc_dec_value",
+  "args": { "action": "dec_min" },
+  "context": [{ "key": "preceding_text", "operator": "regex_match", "operand": "^[0-9]{1,*}$",
+    // "match_all": true
+  }]
+},
+{ "keys": ["ctrl+shift+up"],  "command": "inc_dec_value",
+  "args": { "action": "inc_all" },
+  "context": [{ "key": "preceding_text", "operator": "not_regex_match", "operand": "^[0-9]{1,*}$",
+  "match_all": true
+   }
+]
+},
+
+  { "keys": ["ctrl+shift+down"],"command": "inc_dec_value",
+    "args": { "action": "dec_all" },
+    "context": [{ "key": "preceding_text", "operator": "not_regex_match", "operand": "^[0-9]{1,*}$",
+     "match_all": true
+   }]
+  },
+
+
+
+///SUBLIME text shortcuts overridden by some plugin
+{ "keys": ["ctrl+u"], "command": "soft_undo" },
+{ "keys": ["ctrl+shift+u"], "command": "soft_redo" },
+  { "keys": ["ctrl+shift+space"], "command": "expand_selection", "args": {"to": "scope"} },
+  { "keys": ["ctrl+shift+r"], "command": "goto_symbol_in_project" },
+
+
+]
+
